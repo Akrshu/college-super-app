@@ -1,4 +1,5 @@
-const mongoose = require("mongoose");
+// ✅ models/Listing.js
+import mongoose from "mongoose";
 
 const listingSchema = new mongoose.Schema({
   title: { type: String, required: true },
@@ -13,4 +14,5 @@ const listingSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model("Listing", listingSchema);
+const Listing = mongoose.model("Listing", listingSchema);
+export default Listing;
